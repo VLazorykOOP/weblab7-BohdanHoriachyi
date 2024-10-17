@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для введення інформації про товари</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+    <!-- Навігаційна панель -->
+    <div class="navbar">
+        <a href="D:\lab1HTML\avtor.html">Про Автора</a>
+        <a href="D:\lab1HTML\holovna.html">Головна</a>
+        <a href="D:\lab1HTML\news.html">Новини</a>
+        <a href="D:\lab1HTML\info.html">Інформація</a>
+        <a href="#">Форма</a>
+    </div>
+
+    <!-- Заголовок сторінки -->
+    <div class="container">
+        <h2>Введіть інформацію про товар</h2>
+    </div>
+
+    <!-- Форма введення інформації про товар -->
+    <div class="container">
+        <form action="#" method="POST" accept-charset="UTF-8" enctype="multipart/form-data" id="productForm">
+            <fieldset id="productInfo">
+                <legend>Дані про товар</legend>
+
+                <!-- Поле для введення назви товару -->
+                <label for="productName">Назва товару:</label>
+                <input type="text" id="productName" name="productName" required autofocus>
+
+                <!-- Поле для введення ціни -->
+                <label for="price">Ціна (грн):</label>
+                <input type="number" id="price" name="price" required min="1">
+
+                <!-- Поле для введення номера телефону -->
+                <label for="phone">Контактний телефон:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+380 ХХХ ХХХ ХХХ">
+
+                <!-- Поле для вибору файлу (зображення товару) -->
+                <label for="image">Зображення товару:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+
+                <!-- Поле для вибору кольору -->
+                <label for="color">Оберіть колір товару:</label>
+                <input type="color" id="color" name="color">
+
+                <!-- Поле для введення опису товару -->
+                <label for="description">Опис товару:</label>
+                <textarea id="description" name="description" rows="4" cols="50" maxlength="500" required></textarea>
+
+                <!-- Поле для вибору дати тижня -->
+                <label for="deliveryWeek">Дата доставки (тиждень):</label>
+                <input type="week" id="deliveryWeek" name="deliveryWeek" required>
+
+            </fieldset>
+
+            <!-- Кнопки відправки та скидання форми -->
+            <button type="submit" form="productForm" formmethod="POST">Відправити інформацію</button>
+            <button type="reset" form="productForm">Скинути</button>
+        </form>
+    </div>
+    
+</body>
+</html>

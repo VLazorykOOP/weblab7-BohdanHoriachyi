@@ -1,0 +1,224 @@
+/* Основні стилі */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans Unicode', Calibri, Arial, sans-serif;
+    background-color: #f0f8f5; /* Світло-зелений фон сторінки */
+    color: #333;
+}
+
+/* Навігаційна панель */
+.navbar {
+    position: sticky; 
+    top: 0; 
+    padding: 15px;
+    background-color: #2e8b57; /* Темно-зелений */
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #3cb371; /* Світло-зелений при наведенні */
+}
+
+/* Заголовок */
+.header {
+    background-color: #32cd32; /* Яскраво-зелений */
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.header h2, .header h4 {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+/* Стиль для горизонтальних ліній */
+hr {
+    width: 80%;
+    height: 4px;
+    background-color: #3cb371;
+    margin: 20px auto;
+    border: none;
+}
+
+/* Контейнери */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #e0ffe0; /* Світло-зелений для контейнерів */
+    width: 80%;
+    max-width: 1200px;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Новини */
+.news {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news h2 {
+    font-size: 28px;
+    color: #2e8b57;
+    margin-bottom: 10px;
+}
+
+.news-item {
+    margin-bottom: 30px;
+}
+
+.news-item h3 {
+    font-size: 24px;
+    color: #3cb371;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.news-item span {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Стиль для таблиць */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #2e8b57;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #3cb371; /* Темно-зелений заголовок таблиці */
+    color: white;
+}
+
+td {
+    background-color: #f0f8f5; /* Світло-зелений фон для клітинок */
+}
+
+/* Стиль для секції "Про компанію" */
+.about {
+    background-color: #fff;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Стиль для таблиці .tg */
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.tg td, .tg th {
+    border: 1px solid black;
+    padding: 10px 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    word-break: normal;
+}
+
+.tg .tg-0pky {
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Нотатка під новинами */
+.container h2 {
+    font-size: 24px;
+    color: #2e8b57;
+    margin: 0;
+}
+ /* Стилі для форми */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+input, textarea, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #2e8b57;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3cb371;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+}       
+
