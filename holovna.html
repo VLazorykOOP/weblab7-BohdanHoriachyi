@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аптека "ЗАБАГАНКА"</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -30,6 +30,15 @@
         <h2>Раді вітати Вас на нашому сайті! <br> Будь-яка забаганка - за ваші гроші!</h2>
     </div>
 
+    <hr>
+
+    <h2>Введіть текст, щоб підрахувати кількість слів:</h2>
+    <form id="wordForm">
+      <textarea id="textInput" rows="5" cols="30" placeholder="Введіть ваш текст тут..."></textarea><br>
+      <button type="button" onclick="countWords()">Порахувати слова</button>
+    <p>Кількість слів: <span id="wordCount">0</span></p>
+    </form>
+    
     <hr>
 
     <!-- Про компанію -->

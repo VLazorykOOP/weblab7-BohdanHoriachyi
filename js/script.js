@@ -3,41 +3,64 @@ window.onload = function() {
 };
 
 window.onunload = function() {
-    alert("Користувач залишає сторінку.");
+    alert("Ви залишаєте сторінку. До побачення!");
 };
 
-window.onbeforeprint = function() {
-    alert("Сторінка буде надрукована.");
+let resizeTimeout;
+window.onresize = function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+        alert("Розмір вікна було змінено.");
+    }, 500);
 };
 
-window.onafterprint = function() {
-    alert("Сторінка була надрукована.");
-};
-
-window.onbeforeunload = function() {
-    return "Ви дійсно хочете залишити сторінку?";
+window.onfocus = function() {
+    console.log("Вікно активоване.");
 };
 
 window.onblur = function() {
     console.log("Вікно втратило фокус.");
 };
 
-window.onfocus = function() {
-    console.log("Вікно отримало фокус.");
-};
+const elements = document.querySelectorAll("h1, h2, h3, b, i");
 
-window.onerror = function(message, source, lineno, colno, error) {
-    console.log("Сталася помилка: " + message);
-};
+function changeStyle(element, color, fontSize) {
+    element.style.color = color;
+    element.style.fontSize = fontSize;
+}
 
-window.ononline = function() {
-    alert("Документ тепер в мережі.");
-};
+elements.forEach(element => {
+    element.onclick = function() {
+        console.log("Елемент клікнутий:", element.tagName);
+        changeStyle(element, "blue", "1.2em");
+    };
 
-window.onoffline = function() {
-    alert("Документ перейшов в автономний режим.");
-};
+    element.ondblclick = function() {
+        console.log("Елемент подвійно клікнутий:", element.tagName);
+        changeStyle(element, "green", "1.5em");
+    };
 
-window.onresize = function() {
-    console.log("Розмір вікна змінено.");
-};
+    element.onmouseover = function() {
+        console.log("Курсор над елементом:", element.tagName);
+        element.style.textDecoration = "underline";
+    };
+
+    element.onmouseout = function() {
+        console.log("Курсор покинув елемент:", element.tagName);
+        element.style.textDecoration = "none";
+    };
+});
+
+function showDocumentProperties() {
+    const properties = Object.keys(document);
+    document.getElementById('output').value = properties.join('\n');
+}
+
+function countWords() {
+    const text = document.getElementById("textInput").value;
+    const words = text.trim().split(/\s+/);
+    const wordCount = words.length;
+  
+    document.getElementById("wordCount").innerText = wordCount;
+  }
+  

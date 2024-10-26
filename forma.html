@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форма для введення інформації про товари</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -40,11 +40,11 @@
 
                 <!-- Поле для введення номера телефону -->
                 <label for="phone">Контактний телефон:</label>
-                <input type="tel" id="phone" name="phone" required placeholder="+380 ХХХ ХХХ ХХХ">
+                <input autofocus type="tel" id="phone" name="phone" required placeholder="+380 ХХХ ХХХ ХХХ">
 
                 <!-- Поле для вибору файлу (зображення товару) -->
                 <label for="image">Зображення товару:</label>
-                <input type="file" id="image" name="image" accept="image/*" required>
+                <input autofocus type="file" id="image" name="image" accept="image/*" required>
 
                 <!-- Поле для вибору кольору -->
                 <label for="color">Оберіть колір товару:</label>
@@ -56,7 +56,7 @@
 
                 <!-- Поле для вибору дати тижня -->
                 <label for="deliveryWeek">Дата доставки (тиждень):</label>
-                <input type="week" id="deliveryWeek" name="deliveryWeek" required>
+                <input readonly type="week" id="deliveryWeek" name="deliveryWeek" required>
 
             </fieldset>
 
